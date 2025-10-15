@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fara Temessadouno - Generative AI Course Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 1.5rem; /* Increased rounding */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #e5e7eb;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .submission-card {
+            background: #fff;
+            border-radius: 1.5rem; /* Increased rounding */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+        }
+        .submission-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .submission-card .placeholder-link {
+            background-color: #4F46E5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-align: center;
+            display: inline-block;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .submission-card .placeholder-link:hover {
+            background-color: #4338CA;
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+            left: 0;
+            background: white;
+        }
+        .tag {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                Fara W. Temessadouno
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about-me" class="nav-link text-lg">About Me</a>
+                <a href="#about-course" class="nav-link text-lg">The Course</a>
+                <a href="#submissions" class="nav-link text-lg">My Submissions</a>
+            </div>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about-me" class="block py-2 text-lg">About Me</a>
+            <a href="#about-course" class="block py-2 text-lg">The Course</a>
+            <a href="#submissions" class="block py-2 text-lg">My Submissions</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Welcome Section -->
+        <section class="text-center mb-20">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">Generative AI for Work & Research</h1>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">A portfolio of my journey through the 8-week course by GRAPH.</p>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about-me" class="mb-20">
+            <div class="section-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-shrink-0">
+                    <div class="w-48 h-48 rounded-full gradient-bg flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
+                        FT
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <h3 class="text-xl font-semibold text-indigo-600 mb-2">Fara Wagbo Temessadouno</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        I am a Public Health Doctor and Epidemiologist with extensive experience in team management, multi-stakeholder project coordination, and epidemiological surveillance. My work has primarily focused on assisting MSF teams in the field, managing research projects, and contributing to epidemic investigations.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Epidemiology</span>
+                        <span class="tag">Public Health</span>
+                        <span class="tag">Project Management</span>
+                        <span class="tag">Research</span>
+                        <span class="tag">Team Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About The Course Section -->
+        <section id="about-course" class="mb-20">
+             <div class="section-card p-8 md:p-12">
+                 <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">About the Course</h2>
+                 <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-center text-gray-700 mb-8">
+                        This 8-week guided course, <span class="font-semibold text-indigo-600">"Generative AI for Work & Research Productivity,"</span> focuses on leveraging no-code AI tools to automate tasks and enhance efficiency. The curriculum is designed to provide hands-on experience with Large Language Models (LLMs) for a variety of applications, from creating websites to performing complex data analysis and automating research workflows.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="p-6 bg-indigo-50 rounded-xl">
+                            <h4 class="text-lg font-semibold mb-2 text-indigo-800">Live Workshops</h4>
+                            <p class="text-gray-600">Weekly interactive sessions with instructors.</p>
+                        </div>
+                        <div class="p-6 bg-indigo-50 rounded-xl">
+                            <h4 class="text-lg font-semibold mb-2 text-indigo-800">Capstone Project</h4>
+                            <p class="text-gray-600">A final project to showcase newly acquired skills.</p>
+                        </div>
+                        <div class="p-6 bg-indigo-50 rounded-xl">
+                            <h4 class="text-lg font-semibold mb-2 text-indigo-800">Personalized Feedback</h4>
+                            <p class="text-gray-600">Guidance on assessments and projects.</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- My Weekly Submissions Section -->
+        <section id="submissions">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">My Weekly Submissions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+
+                <!-- Submission 1 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 1</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Websites, Docs & Presentations</h3>
+                        <p class="text-gray-600 mb-6">Learning how LLMs work, generating structured outputs, and building websites like this one.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+
+                <!-- Submission 2 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 2</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">AI-Automated Data Analysis</h3>
+                        <p class="text-gray-600 mb-6">Using AI tools to process datasets, create visualizations, and generate automated reports.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+
+                <!-- Submission 3 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 3</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">GenAI for Research & Text Analysis</h3>
+                        <p class="text-gray-600 mb-6">Applying AI for literature reviews, text classification, and knowledge synthesis.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+                
+                <!-- Submission 4 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 4</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Custom GPTs and Chatbots</h3>
+                        <p class="text-gray-600 mb-6">Building custom research assistants and integrating knowledge bases into AI workflows.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+
+                <!-- Submission 5 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 5</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">AI for Task Automation</h3>
+                        <p class="text-gray-600 mb-6">Designing AI agents and complex workflows to automate repetitive research tasks.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+                
+                <!-- Submission 6 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 6</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">GenAI for Communication</h3>
+                        <p class="text-gray-600 mb-6">Creating research summaries, scientific figures, and video abstracts with AI tools.</p>
+                        <a href="#" class="placeholder-link">View Submission</a>
+                    </div>
+                </div>
+
+                 <!-- Submission 7 -->
+                <div class="submission-card">
+                    <div class="p-8">
+                        <p class="text-indigo-500 font-semibold text-sm mb-1">Module 7</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Capstone Project & Showcase</h3>
+                        <p class="text-gray-600 mb-6">Developing and presenting a final AI solution that integrates course learnings.</p>
+                        <a href="#" class="placeholder-link">View Project</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Fara Wagbo Temessadouno. All rights reserved.</p>
+            <p class="text-sm opacity-75">This site was created as part of the "Generative AI for Work & Research Productivity" course.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
